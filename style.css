@@ -131,6 +131,123 @@
 
 /*        mode   */
 
+
+/* Dark Mode Variables */
+:root {
+    --body-color: #ffffff;
+    --text-color: #444444;
+    --box-shadow-color: rgba(0, 0, 0, 0.1);
+    --card-bg: #ffffff;
+    --nav-bg: #ffffff;
+    --border-color: #e0e0e0;
+}
+
+/* Dark Mode Styles */
+body.dark {
+    --body-color: #121212;
+    --text-color: #ffffff;
+    --box-shadow-color: rgba(255, 255, 255, 0.1);
+    --card-bg: #1e1e1e;
+    --nav-bg: #1e1e1e;
+    --border-color: #333333;
+}
+
+/* Apply Variables */
+body {
+    background-color: var(--body-color);
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+body.dark {
+    background-color: var(--body-color);
+}
+
+/* Navigation Dark Mode */
+body.dark nav {
+    background-color: var(--nav-bg);
+}
+
+body.dark .nav_link {
+    color: var(--text-color);
+}
+
+/* About Section Dark Mode */
+body.dark .about-info {
+    background-color: var(--card-bg);
+    border-color: var(--border-color);
+}
+
+body.dark .row {
+    background-color: var(--card-bg);
+}
+
+/* Skills Section Dark Mode */
+body.dark .skill-box .title {
+    color: var(--text-color);
+}
+
+/* Projects Section Dark Mode */
+body.dark .project-box {
+    background-color: var(--card-bg);
+    border-color: var(--border-color);
+}
+
+body.dark .project-box h3,
+body.dark .project-box label {
+    color: var(--text-color);
+}
+
+/* Contact Section Dark Mode */
+body.dark .contact-info {
+    background-color: var(--card-bg);
+    border-color: var(--border-color);
+}
+
+body.dark .input-field,
+body.dark .input-subject,
+body.dark textarea {
+    background-color: var(--card-bg);
+    border-color: var(--border-color);
+    color: var(--text-color);
+}
+
+/* Footer Dark Mode */
+body.dark footer {
+    background-color: var(--body-color);
+}
+
+body.dark .footer_menu_list a {
+    color: var(--text-color);
+}
+
+/* Dark Mode Toggle Button */
+.moon-sun {
+    background-color: transparent;
+    border: 2px solid var(--border-color);
+}
+
+body.dark .moon-sun {
+    border-color: var(--border-color);
+}
+
+body.dark #moon {
+    display: none;
+}
+
+body.dark #sun {
+    display: block;
+    color: #ffffff;
+}
+
+#sun {
+    display: none;
+}
+
+/* Smooth Transitions */
+* {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
 .mode{
     
     display: flex;
@@ -169,11 +286,14 @@ body.dark #moon{
 /* wrapper */
 
 
-.wrapper{
-   padding-inline: 10vw;
+.wrapper {
+    padding-inline: 10vw;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
    /* box */
+   
 
 .featured-box{
     position: relative;
@@ -753,4 +873,198 @@ footer{
     color: var(--color-white);
 }
 
+
+@media screen and (max-width: 1200px) {
+    html {
+        font-size: 15px;
+    }
+
+    .featured-box {
+        gap: 1rem;
+    }
+
+    .image {
+        width: 350px;
+        height: 450px;
+        
+    }
+
+    .project-box {
+        width: calc(33.333% - 1.5rem);
+    }
+}
+
+/* Medium Devices (Tablets, up to 992px) */
+@media screen and (max-width: 992px) {
+    html {
+        font-size: 14px;
+    }
+
+    .wrapper {
+        padding-inline: 5vw;
+    }
+
+    .featured-box {
+        flex-direction: column;
+        text-align: center;
+        gap: 4rem;
+    }
+
+    .featured-text {
+        width: 100%;
+        align-items: center;
+        margin-top: -30%;
+    }
+
+    .social_icons {
+        justify-content: center;
+    }
+
+    .image {
+        width: 300px;
+        height: 400px;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .col {
+        width: 100%;
+    }
+
+    .project-box {
+        width: calc(50% - 1rem);
+    }
+
+    .rows {
+        flex-direction: column;
+    }
+}
+
+/* Small Devices (Tablets/Large Phones, up to 768px) */
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 13px;
+    }
+
+    nav {
+        padding: 1rem 5vw;
+    }
+
+    .nav-menu {
+        position: fixed;
+        top: 90px;
+        left: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: calc(100vh - 90px);
+        background: var(--nav-bg);
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+        transition: 0.3s;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-menu.responsive {
+        left: 0;
+    }
+
+    .nav_menu_list {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .nav-menu-btn {
+        display: block;
+    }
+
+    .project-box {
+        width: 100%;
+    }
+
+    .form-inputs {
+        flex-direction: column;
+    }
+
+    .input-field {
+        width: 100%;
+    }
+}
+
+/* Extra Small Devices (Phones, up to 576px) */
+@media screen and (max-width: 576px) {
+    html {
+        font-size: 12px;
+    }
+
+    .wrapper {
+        padding-inline: 1rem;
+    }
+
+    .featured-name {
+        font-size: 2.5rem;
+    }
+
+    .image {
+        width: 250px;
+        height: 350px;
+        margin-top: -250%;
+        margin-right: 50px;
+        
+    }
+
+    .section {
+        padding: 3rem 1rem;
+        
+    }
+
+    .about-info {
+        padding: 1.5rem;
+        margin-top: 50%;
+        
+
+    }
+
+    .footer-menu {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .social_icons {
+        gap: 1rem;
+    }
+}
+
+/* Height-based media queries for better vertical responsiveness */
+@media screen and (max-height: 700px) {
+    .featured-box {
+        padding: 3rem 0;
+    }
+
+    .image {
+        height: 300px;
+    }
+}
+
+/* Dark mode considerations for responsive design */
+@media (prefers-color-scheme: dark) {
+    body.dark .nav-menu {
+        background: var(--nav-bg);
+    }
+}
+
+/* Print styles for better printing */
+@media print {
+    .nav-menu-btn,
+    .mode,
+    .social_icons,
+    .form-control {
+        display: none;
+    }
+    
+}
 
