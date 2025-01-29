@@ -590,6 +590,8 @@ i {
 
 }
 
+
+
 .skill-box .skill-bar {
     height: 80%;
     width: 100%;
@@ -602,7 +604,7 @@ i {
     position: relative;
     display: block;
     height: 100%;
-    width: 90%;
+    width: 50%;
     border-radius: 6px;
     background: #8749f2;
     animation: progress .4s ease-in-out forwards; 
@@ -633,6 +635,32 @@ i {
 .skill-per .Shopify{
     animation-delay: 0.1s;
     width: 90%;
+}
+
+.row > .skill:first-of-type{
+    .skill-box .skill-per {    
+        width: 80%;
+    }
+}
+.row > .skill:nth-of-type(2){
+    .skill-box .skill-per {    
+        width: 80%;
+    }
+}
+.row > .skill:nth-of-type(3){
+    .skill-box .skill-per {    
+        width: 40%;
+    }
+}
+.row > .skill:nth-of-type(4){
+    .skill-box .skill-per {    
+        width: 80%;
+    }
+}
+.row > .skill:nth-of-type(5){
+    .skill-box .skill-per {    
+        width: 90%;
+    }
 }
 
 
