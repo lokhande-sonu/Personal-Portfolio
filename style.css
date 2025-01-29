@@ -731,6 +731,10 @@ i {
     gap: 20px;
  }
 
+ .col{
+    width: 50%;
+ }
+
 .contact-info {
     position: relative;
     display: flex;
@@ -918,6 +922,7 @@ footer{
     .featured-text {
         width: 100%;
         align-items: center;
+        margin-top: 150px;
     }
 
     .social_icons {
@@ -1011,6 +1016,7 @@ footer{
 @media screen and (max-height: 700px) {
     .featured-box {
         padding: 3rem 0;
+        /* margin-top: 100px; */
     }
 
     .image {
@@ -1037,8 +1043,8 @@ footer{
     .image {
         width: 250px;
         height: 350px;
-        margin-top: -250%;
-        margin-right: 50px;
+        /* margin-top: -250%; */
+        /* margin-right: 50px; */
         
     }
 
